@@ -37,8 +37,52 @@
 
 .select-program__list {
   list-style: none;
+  min-width: 280px;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 .select-program__list-item {
   background-color: #f2f2f2;
+}
+
+@media (min-width: @tablet-width) {
+  .select-program__preview-title {
+    font-size: 60px;
+    line-height: 60px;
+    color: #111111;
+  }
+  .select-program__preview-slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color: #111111;
+  }
+  .select-program__preview::before {
+    background: none;
+  }
+  .select-program__list {
+    min-width: 708px;
+    padding: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .select-program__preview::before {
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .select-program__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .select-program__list-item {
+    max-width: 570px;
+    min-height: 372px;
+    margin: 40px;
+    padding: 50px;
+  }
 }

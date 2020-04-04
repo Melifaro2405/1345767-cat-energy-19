@@ -3,18 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <title>Каталог продукции Cat Energy</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">>
 </head>
 
 <body>
 
   <header class="page-header">
+    <h2 class="visually-hidden">Навигация по страницам сайта</h2>
     <a class="page-header__logo" href="#">
       <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -29,6 +32,7 @@
         </ul>
       </div>
     </nav>
+    <button class="main-nav__toggle" type="button">Открыть меню</button>
   </header>
 
   <main class="catalog-goods">
@@ -231,7 +235,7 @@
 
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
-      <div class="contacts-wrapper">
+      <div class="contacts__wrapper">
         <p class="contacts__invite">Приглашаем к сотрудничеству дилеров!</p>
         <address class="contacts__address">Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
