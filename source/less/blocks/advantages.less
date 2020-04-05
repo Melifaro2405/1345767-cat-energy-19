@@ -1,10 +1,30 @@
 .advantages__list {
   .list-reset();
   margin: 0 20px;
-  padding: 0;
   padding-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
-.advantages__list-item {
-  position: relative;
+.advantages__item {
+  min-height: 60px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-height: 228px;
+    margin-top: 59px;
+    margin-bottom: 30px;
+  }
+}
+
+.advantages__icon-wrapper {
+  background-color: #68b738;
+  width: 60px;
+  height: 60px;
 }
