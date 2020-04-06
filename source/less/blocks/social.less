@@ -1,5 +1,19 @@
+.socials {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 110px;
+  }
+}
+
 .socials__logo-wrapper {
   text-align: center;
+  margin: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .social__list {
@@ -14,6 +28,7 @@
 
 .social__academy-wrapper {
   text-align: center;
+  padding: 20px;
 }
 
 .social__academy-link {

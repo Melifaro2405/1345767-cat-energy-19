@@ -1,16 +1,39 @@
 .contacts-wrapper {
+  display: flex;
+  justify-content: space-between;
   background-color: #ffffff;
+  padding: 30px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 70px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .contacts__invite {
+  margin: 0;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #111111;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 25px;
+    width: 200px;
+  }
 }
 
 .contacts__address {
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
-  font-size: inherit;
+  font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    width: 170px;
+    text-align: right;
+  }
 }

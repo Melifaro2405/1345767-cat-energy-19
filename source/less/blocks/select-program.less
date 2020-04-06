@@ -57,6 +57,12 @@
   color: #ffffff;
 }
 
+.select-program__type {
+  @media (min-width: @desktop-width) {
+    margin: 80px 110px;
+  }
+}
+
 .select-program__list {
   .list-reset();
   min-width: 280px;
@@ -69,7 +75,8 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0;
   }
 }
 
@@ -80,15 +87,15 @@
   padding: 20px;
 
   @media (min-width: @tablet-width) {
-    min-width: 708px;
+    width: 708px;
     min-height: 372px;
     padding-right: 280px;
     padding-left: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 570px;
-    margin: 40px;
+    width: 570px;
     padding: 50px;
+    margin: 0;
   }
 }
