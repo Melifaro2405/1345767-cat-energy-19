@@ -1,26 +1,101 @@
 .live-example {
   background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
 }
 
-.live-example__info {
+.live-example__wrapper {
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: #f2f2f2;
+    width: 505px;
+    height: 320px;
+  }
+}
+
+.live-example__content {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  padding-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.live-example__list {
+  display: flex;
+  justify-content: space-between;
+  .list-reset();
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+  }
+}
+
+.live-example__list-item {
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+  }
 }
 
 .live-example__field {
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .live-example__value {
   font-size: 12px;
   line-height: 12px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .live-example__cost {
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 160px;
+    margin-left: auto;
+    font-size: 20px;
+    text-align: right;
+  }
+}
+
+.live-example__interactive {
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    background-color: #f2f2f2;
+  }
 }
 
 .live-example__interactive-label-before,

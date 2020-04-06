@@ -1,12 +1,27 @@
 .main-nav__list {
-  list-style: none;
+  .list-reset();
+  display: flex;
 }
 
 .main-nav__item {
+  display: none;
   font-size: 20px;
   line-height: 20px;
   text-align: center;
   font-weight: 500;
   border-top: 1px solid #e6e6e6;
   padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    font-size: 18px;
+    line-height: 24.86px;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+    font-size: 20px;
+  }
 }

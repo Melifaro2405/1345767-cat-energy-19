@@ -1,13 +1,11 @@
 html {
   box-sizing: border-box;
 }
-
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-
 body {
   min-width: 320px;
   padding: 0;
@@ -20,16 +18,13 @@ body {
   font-style: normal;
   color: #444444;
 }
-
 a {
   text-decoration: none;
 }
-
 img {
   max-width: 100%;
   height: auto;
 }
-
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
