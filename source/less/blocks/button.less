@@ -1,16 +1,25 @@
 .button {
   display: block;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 40px;
   font-weight: 400;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #68b738;
-  min-height: 40px;
-  padding: 10px 15px;
+  padding: 0 15px;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+    transition-duration: 150ms;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 20px;
   }
 }

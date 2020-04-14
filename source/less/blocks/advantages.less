@@ -56,9 +56,20 @@
   }
 }
 
-.advantages__item--odd {
+.advantages__item:nth-child(n+1) {
   @media (min-width: @tablet-width) {
     padding-right: 17%;
+
+    &::before {
+      content: counter(list); // выводим значение счетчика
+      position: absolute;
+      font-size: 281px;
+      line-height: 281px;
+      left: 115px;
+      top: -40px;
+      z-index: -1;
+      color: #f2f2f2;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -66,45 +77,30 @@
   }
 }
 
-.advantages__item--odd::before {
-  @media (min-width: @tablet-width) {
-    content: counter(list); // выводим значение счетчика
-    position: absolute;
-    font-size: 281.07px;
-    line-height: 281.07px;
-    left: 115px;
-    top: -40px;
-    z-index: -1;
-    color: #f2f2f2;
-  }
-}
-
-.advantages__item--even {
+.advantages__item:nth-child(2n) {
   @media (min-width: @tablet-width) {
     padding-left: 30px;
     padding-right: 10%;
+
+    &::before {
+      content: counter(list); // выводим значение счетчика
+      position: absolute;
+      font-size: 281px;
+      line-height: 281px;
+      left: 140px;
+      top: -40px;
+      z-index: -1;
+      color: #f2f2f2;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
     padding-right: 0;
-  }
-}
 
-.advantages__item--even::before {
-  @media (min-width: @tablet-width) {
-    content: counter(list); // выводим значение счетчика
-    position: absolute;
-    font-size: 281.07px;
-    line-height: 281.07px;
-    left: 140px;
-    top: -40px;
-    z-index: -1;
-    color: #f2f2f2;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 110px;
+    &::before {
+      left: 110px;
+    }
   }
 }
 

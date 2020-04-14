@@ -7,11 +7,19 @@
   padding-right: 21px;
   padding-left: 20px;
 
+  &--next {
+    margin-top: 20px;
+  }
+
   @media (min-width: @tablet-width) {
     display: block;
     min-height: 371px;
     padding-top: 69px;
     padding-left: 51px;
+
+    &--next {
+      margin-top: 30px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -19,19 +27,11 @@
     width: 47%;
     padding-top: 46px;
     padding-bottom: 39px;
-  }
-}
 
-.type-program--next {
-  margin-top: 20px;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 0;
-    padding-right: 30px;
+    &--next {
+      margin-top: 0;
+      padding-right: 30px;
+    }
   }
 }
 

@@ -12,173 +12,210 @@
 <body>
 
   <h1 class="visually-hidden">Каталог продукции Cat Energy</h1>
-  <header class="page-header">
+  <header class="page-header page-header--catalog-desktop container">
     <h2 class="visually-hidden">Навигация по страницам сайта</h2>
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
-    </a>
+    <div class="page-header__logo-wrapper">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+      </a>
+      <!-- main-nav__button--cross: меняет вид с бургера на крест -->
+      <!-- main-nav__button--nojs: вид при выключенном JS -->
+      <button class="main-nav__button main-nav__button--cross main-nav__button--nojs" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="main-nav__line main-nav__line-first"></span>
+        <span class="main-nav__line main-nav__line-second"></span>
+        <span class="main-nav__line main-nav__line-third"></span>
+      </button>
+    </div>
     <!-- main-nav--visible: раскрытая навигация -->
     <nav class="main-nav main-nav--visible">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item main-nav__item--active">
-          <a>Каталог продукции</a>
+          <a class="main-nav__link" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a href="form.html">Подбор программы</a>
+          <a class="main-nav__link main-nav__link--active">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
-    <!-- main-nav__button--cross: меняет вид с бургера на крест -->
-    <!-- main-nav__button--nojs: вид при выключенном JS -->
-    <button class="main-nav__button main-nav__button--cross main-nav__button--nojs" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-      <span class="main-nav__line main-nav__line-first"></span>
-      <span class="main-nav__line main-nav__line-second"></span>
-      <span class="main-nav__line main-nav__line-third"></span>
-    </button>
   </header>
 
-  <main class="catalog-goods">
-    <section class="catalog-goods__wrapper">
+  <main class="catalog">
+    <section class="catalog__goods container">
       <h2 class="block-title">Каталог продукции</h2>
-      <ul class="catalog-goods__list">
-        <li class="catalog-goods__item">
-          <img class="catalog-goods__item-img" src="./img/chicken-small-mobile@1x.jpg" alt="">
-          <h3 class="catalog-goods__item-title">Cat Energy PRO 500 г</h3>
-          <table class="catalog-goods__table">
-            <tr>
-              <td class="catalog-goods__table-value">Объем</td>
-              <td class="catalog-goods__table-field">500 г</td>
+      <ul class="catalog__goods-list">
+        <li class="catalog__goods-item">
+          <picture class="catalog__picture catalog__picture--small">
+            <img class="catalog__img catalog__img--small" src="./img/chicken-small-mobile@1x.jpg" width="140"
+              height="144" alt="Банка Cat Energy pro 500г с курицей">
+          </picture>
+          <table class="catalog__goods-table">
+            <caption class="catalog__goods-table-caption">
+              Cat Energy PRO 500 г
+            </caption>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Объем</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">500 г</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Вкус</td>
-              <td class="catalog-goods__table-field">Курица</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Вкус</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">Курица</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Цена</td>
-              <td class="catalog-goods__table-field">700 р.</td>
-            </tr>
-          </table>
-          <a class="button" href="#">Заказать</a>
-        </li>
-        <li class="catalog-goods__item">
-          <img class="catalog-goods__item-img" src="./img/chicken-big-mobile@1x.jpg" alt="">
-          <h3 class="catalog-goods__item-title">Cat Energy PRO 1000 г</h3>
-          <table class="catalog-goods__table">
-            <tr>
-              <td class="catalog-goods__table-value">Объем</td>
-              <td class="catalog-goods__table-field">1000 г</td>
-            </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Вкус</td>
-              <td class="catalog-goods__table-field">Курица</td>
-            </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Цена</td>
-              <td class="catalog-goods__table-field">1000 р.</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Цена</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">700 р.</td>
             </tr>
           </table>
-          <a class="button" href="#">Заказать</a>
+          <a class="button catalog__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-goods__item">
-          <img class="catalog-goods__item-img" src="./img/fish-small-mobile@1x.jpg" alt="">
-          <h3 class="catalog-goods__item-title">Cat Energy PRO 500 г</h3>
-          <table class="catalog-goods__table">
-            <tr>
-              <td class="catalog-goods__table-value">Объем</td>
-              <td class="catalog-goods__table-field">500 г</td>
+        <li class="catalog__goods-item">
+          <picture class="catalog__picture catalog__picture--large">
+            <img class="catalog__img catalog__img--large" src="./img/chicken-big-mobile@1x.jpg" width="140" height="144"
+              alt="Банка Cat Energy pro 1000г с курицей">
+          </picture>
+          <table class="catalog__goods-table">
+            <caption class="catalog__goods-table-caption">
+              Cat Energy PRO 1000 г
+            </caption>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Объем</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">1000 г</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Вкус</td>
-              <td class="catalog-goods__table-field">Рыба</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Вкус</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">Курица</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Цена</td>
-              <td class="catalog-goods__table-field">700 р.</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Цена</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">1000 р.</td>
             </tr>
           </table>
-          <a class="button" href="#">Заказать</a>
+          <a class="button catalog__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-goods__item">
-          <img class="catalog-goods__item-img" src="./img/fish-big-mobile@1x.jpg" alt="">
-          <h3 class="catalog-goods__item-title">Cat Energy PRO 1000 г</h3>
-          <table class="catalog-goods__table">
-            <tr>
-              <td class="catalog-goods__table-value">Объем</td>
-              <td class="catalog-goods__table-field">1000 г</td>
+        <li class="catalog__goods-item">
+          <picture class="catalog__picture catalog__picture--small">
+            <img class="catalog__img catalog__img--small" src="./img/fish-small-mobile@1x.jpg" width="140" height="144"
+              alt="Банка Cat Energy pro 500г с рыбой">
+          </picture>
+          <table class="catalog__goods-table">
+            <caption class="catalog__goods-table-caption">
+              Cat Energy PRO 500 г
+            </caption>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Объем</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">500 г</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Вкус</td>
-              <td class="catalog-goods__table-field">Рыба</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Вкус</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">Рыба</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Цена</td>
-              <td class="catalog-goods__table-field">1000 р.</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Цена</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">700 р.</td>
             </tr>
           </table>
-          <a class="button" href="#">Заказать</a>
+          <a class="button catalog__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-goods__item">
-          <img class="catalog-goods__item-img" src="./img/buckwheat-small-mobile@1x.jpg" alt="">
-          <h3 class="catalog-goods__item-title">Cat Energy SLIM 500 г</h3>
-          <table class="catalog-goods__table">
-            <tr>
-              <td class="catalog-goods__table-value">Объем</td>
-              <td class="catalog-goods__table-field">500 г</td>
+        <li class="catalog__goods-item">
+          <picture class="catalog__picture catalog__picture--large">
+            <img class="catalog__img catalog__img--large" src="./img/fish-big-mobile@1x.jpg" width="140" height="144"
+              alt="Банка Cat Energy pro 1000г с рыбой">
+          </picture>
+          <table class="catalog__goods-table">
+            <caption class="catalog__goods-table-caption">
+              Cat Energy PRO 1000 г
+            </caption>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Объем</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">1000 г</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Вкус</td>
-              <td class="catalog-goods__table-field">Гречка</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Вкус</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">Рыба</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Цена</td>
-              <td class="catalog-goods__table-field">400 р.</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Цена</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">1000 р.</td>
             </tr>
           </table>
-          <a class="button" href="#">Заказать</a>
+          <a class="button catalog__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-goods__item">
-          <img class="catalog-goods__item-img" src="./img/buckwheat-big-mobile@1x.jpg" alt="">
-          <h3 class="catalog-goods__item-title">Cat Energy SLIM 1000 г</h3>
-          <table class="catalog-goods__table">
-            <tr>
-              <td class="catalog-goods__table-value">Объем</td>
-              <td class="catalog-goods__table-field">1000 г</td>
+        <li class="catalog__goods-item">
+          <picture class="catalog__picture catalog__picture--small">
+            <img class="catalog__img catalog__img--small" src="./img/buckwheat-small-mobile@1x.jpg" width="140"
+              height="144" alt="Банка Cat Energy slim 500г с гречкой">
+          </picture>
+          <table class="catalog__goods-table">
+            <caption class="catalog__goods-table-caption">
+              Cat Energy SLIM 500 г
+            </caption>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Объем</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">500 г</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Вкус</td>
-              <td class="catalog-goods__table-field">Гречка</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Вкус</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">Гречка</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Цена</td>
-              <td class="catalog-goods__table-field">700 р.</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Цена</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">400 р.</td>
             </tr>
           </table>
-          <a class="button" href="#">Заказать</a>
+          <a class="button catalog__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-goods__item">
-          <img class="catalog-goods__item-img" src="./img/rice-small-mobile@1x.jpg" alt="">
-          <h3 class="catalog-goods__item-title">Cat Energy SLIM 500 г</h3>
-          <table class="catalog-goods__table">
-            <tr>
-              <td class="catalog-goods__table-value">Объем</td>
-              <td class="catalog-goods__table-field">500 г</td>
+        <li class="catalog__goods-item">
+          <picture class="catalog__picture catalog__picture--large">
+            <img class="catalog__img catalog__img--large" src="./img/buckwheat-big-mobile@1x.jpg" width="140"
+              height="144" alt="Банка Cat Energy slim 700г с гречкой">
+          </picture>
+          <table class="catalog__goods-table">
+            <caption class="catalog__goods-table-caption">
+              Cat Energy SLIM 1000 г
+            </caption>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Объем</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">1000 г</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Вкус</td>
-              <td class="catalog-goods__table-field">Рис</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Вкус</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">Гречка</td>
             </tr>
-            <tr>
-              <td class="catalog-goods__table-value">Цена</td>
-              <td class="catalog-goods__table-field">500 р.</td>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Цена</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">700 р.</td>
             </tr>
           </table>
-          <a class="button" href="#">Заказать</a>
+          <a class="button catalog__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-goods__last-item">
+        <li class="catalog__goods-item">
+          <picture class="catalog__picture catalog__picture--small">
+            <img class="catalog__img catalog__img--small" src="./img/rice-small-mobile@1x.jpg" width="140" height="144"
+              alt="Банка Cat Energy slim 500г с рисом">
+          </picture>
+          <table class="catalog__goods-table">
+            <caption class="catalog__goods-table-caption">
+              Cat Energy SLIM 500 г
+            </caption>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Объем</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">500 г</td>
+            </tr>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Вкус</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">Рис</td>
+            </tr>
+            <tr class="catalog__goods-row">
+              <td class="catalog__goods-cell catalog__goods-cell--value">Цена</td>
+              <td class="catalog__goods-cell catalog__goods-cell--field">500 р.</td>
+            </tr>
+          </table>
+          <a class="button catalog__button" href="#">Заказать</a>
+        </li>
+        <li class="catalog__goods-item">
           <h3 class="catalog-goods__item-title">Показать еще 100500 товаров</h3>
           <p class="catalog-goods__last-item-content">На самом деле вкусов гораздо больше!</p>
           <a class="catalog-goods__button-show-all button" href="#">Показать все</a>
@@ -284,7 +321,7 @@
       </div>
     </section>
   </footer>
-
+  <script src="./js/exetrnal.js"></script>
 </body>
 
 </html>

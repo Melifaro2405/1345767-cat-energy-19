@@ -1,42 +1,4 @@
 .page-footer {
   background-color: #f2f2f2;
-  max-width: 1300px;
   margin: auto;
-}
-
-.page-footer__map-iframe {
-  display: block;
-  width: 100%;
-}
-
-.page-footer__map {
-  height: 362px;
-  background-color: #fdf7ef;
-  background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@1x.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center 44.6%, center 100%;
-  background-size: 55px 53px, cover;
-  overflow: hidden;
-
-  @media (min-width: @tablet-width) {
-    height: 400px;
-    background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@1x.png");
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center 55%;
-    background-size: 113px 108px, cover;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 100%;
-    width: 100%;
-    background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop@1x.png");
-    background-repeat: no-repeat, no-repeat;
-    background-size: 113px 108px, cover;
-    background-position: 75.6% 50.5%, 80% 55%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
 }

@@ -7,14 +7,23 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    max-width: 1220px;
     padding-left: 30px;
     padding-right: 30px;
+    max-width: 1300px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 1300px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+}
+
+.container__flex {
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }

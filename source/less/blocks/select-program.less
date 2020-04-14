@@ -17,11 +17,11 @@
   right: 0;
   height: 64%;
   z-index: -1;
-  background-color: #68b738;
+  background-color: #65a93c;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -29,17 +29,15 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    top: 0;
     left: 50%;
-    right: 0;
     width: 50%;
     height: 696px;
-    max-width: 720px;
-    background-color: #69ac40;
+    background-color: #65a93c;
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: right 0 top 0;
+    background-size: contain;
+    top: 0;
   }
 }
 
@@ -47,9 +45,12 @@
   font-size: 36px;
   line-height: 36px;
   color: #ffffff;
-  margin: 0;
+  margin: 0 auto;
+  width: 280px;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
+    width: 427px;
     font-size: 60px;
     line-height: 60px;
     color: #111111;
@@ -105,7 +106,6 @@
 }
 
 .select-program__button {
-  padding-bottom: 12px;
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -115,7 +115,7 @@
     left: 120px;
     text-align: center;
     width: 245px;
-    padding: 15px 15px 15px 10px;
+    line-height: 52px;
   }
 
   @media (min-width: @desktop-width) {
@@ -123,16 +123,6 @@
     padding-left: 15px;
     margin-left: 81px;
   }
-}
-
-.select-program__button:hover,
-.select-program__button:focus {
-  background-color: #5eaa2f;
-  transition-duration: 150ms;
-}
-
-.select-program__button:active {
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .select-program__type {
