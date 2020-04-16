@@ -1,6 +1,18 @@
 .contacts {
   @media (min-width: @desktop-width) {
     position: relative;
+    padding-top: 95px;
+    padding-bottom: 104px;
+  }
+}
+
+.contacts__container {
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 100%;
+    padding-left: 40px;
+    margin: 0 auto;
+    max-width: 1300px;
   }
 }
 
@@ -17,13 +29,9 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
-    width: 1300px;
-    height: 400px;
+    width: 570px;
     padding-left: 35px;
     padding-right: 24px;
-    margin-right: 500px;
-    margin-left: 70px;
-    margin-bottom: 220px;
     max-width: 1300px;
     z-index: 1;
   }
@@ -75,28 +83,21 @@
 
 .contacts__map {
   height: 362px;
-  background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@1x.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center 44.6%, center 100%;
-  background-size: 55px 53px, cover;
+  margin: 0 auto;
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   overflow: hidden;
 
   @media (min-width: @tablet-width) {
     height: 400px;
-    background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@1x.png");
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center 55%;
-    background-size: 113px 108px, cover;
+    background-position: center;
   }
 
   @media (min-width: @desktop-width) {
-    height: 400px;
     width: 100%;
     margin: 0 auto;
-    background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop@1x.png");
-    background-repeat: no-repeat, no-repeat;
-    background-size: 113px 108px, cover;
-    background-position: 75.6% 50.5%, center;
     position: absolute;
     top: 0;
     left: 0;

@@ -55,8 +55,11 @@
       <p class="select-program__title">Функциональное питание для котов</p>
       <p class="select-program__text">Занялся собой? Займись котом!</p>
       <picture>
-        <img class="select-program__img" src="./img/index-can-mobile@1x.png" width="280" height="270"
-        alt="Картинка с банкой корма Cat Energy">
+        <source media="(min-width: 1220px)"
+          srcset="./img/index-can-desktop@1x.png 1x, ./img/index-can-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="./img/index-can-tablet@1x.jpg 1x, ./img/index-can-tablet@2x.jpg 2x">
+        <img class="select-program__img" src="./img/index-can-mobile@1x.png" srcset="./img/index-can-mobile@2x.png 2x"
+          width="280" height="270" alt="Картинка с банкой корма Cat Energy">
       </picture>
       <a class="select-program__button button" href="form.html">Подобрать программу</a>
     </section>
@@ -135,29 +138,29 @@
       <ul class="advantages__list">
         <li class="advantages__item">
           <div class="advantages__icon-wrapper">
-            <img class="advantages__icon-img" src="./img/advantage-leaf@1x.png" width="50" height="50"
-              alt="Изображение листа">
+            <img class="advantages__icon-img" src="./img/advantage-leaf@1x.png" srcset="./img/advantage-leaf@2x.png 2x"
+              width="50" height="50" alt="Изображение листа">
           </div>
           <p class="advantages__item-text">Функциональное питание содержит только полезные питательные вещества.</p>
         </li>
         <li class="advantages__item">
           <div class="advantages__icon-wrapper">
-            <img class="advantages__icon-img" src="./img/advantage-powder@1x.png" width="50" height="50"
-              alt="Изображение порошка">
+            <img class="advantages__icon-img" src="./img/advantage-powder@1x.png"
+              srcset="./img/advantage-powder@2x.png 2x" width="50" height="50" alt="Изображение порошка">
           </div>
           <p class="advantages__item-text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
         </li>
         <li class="advantages__item">
           <div class="advantages__icon-wrapper">
-            <img class="advantages__icon-img" src="./img/advantage-dining@1x.png" width="50" height="50"
-              alt="Изображение порошка">
+            <img class="advantages__icon-img" src="./img/advantage-dining@1x.png"
+              srcset="./img/advantage-dining@2x.png 2x" width="50" height="50" alt="Изображение порошка">
           </div>
           <p class="advantages__item-text">Замените один-два приема обычной еды на наше функциональное питание.</p>
         </li>
         <li class="advantages__item">
           <div class="advantages__icon-wrapper">
-            <img class="advantages__icon-img" src="./img/advantage-clock@1x.png" width="50" height="50"
-              alt="Изображение порошка">
+            <img class="advantages__icon-img" src="./img/advantage-clock@1x.png"
+              srcset="./img/advantage-clock@2x.png 2x" width="50" height="50" alt="Изображение порошка">
           </div>
           <p class="advantages__item-text">Уже через месяц наслаждайтесь изменениями к лучшему <br> вашего питомца!</p>
         </li>
@@ -189,12 +192,22 @@
         <div class="slider">
           <div class="slider__wrapper">
             <div class="slider__picture slider__picture--fat-cat">
-              <img class="slider__img slider__img--fat-cat" src="img/before-mobile@1x.png"
-                alt="Изображение толстого кота" width="320" height="240">
+              <picture>
+                <source media="(min-width: 1300px)"
+                  srcset="./img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="slider__img slider__img--fat-cat" src="img/before-mobile@1x.png"
+                  srcset="img/before-mobile@2x.png 2x" alt="Изображение толстого кота" width="311" height="232">
+              </picture>
+
             </div>
             <div class="slider__picture slider__picture--slim-cat">
-              <img class="slider__img slider__img--slim-cat" src="img/after-mobile@1x.png" alt="Изображение худого кота"
-                width="320" height="240">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="./img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="slider__img slider__img--slim-cat" src="img/after-mobile@1x.png"
+                  srcset="./img/after-mobile@2x.png 2x" alt="Изображение худого кота" width="251" height="240">
+              </picture>
             </div>
           </div>
           <div class="slider__toggle">
@@ -210,19 +223,21 @@
   <footer class="page-footer">
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
-      <div class="contacts__wrapper container">
-        <p class="contacts__invite">Приглашаем <br> к сотрудничеству дилеров!</p>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8
-          <span class="contacts__span-block">Санкт-Петербург</span>
-        </address>
+      <div class="contacts__container">
+        <div class="contacts__wrapper">
+          <p class="contacts__invite">Приглашаем <br> к сотрудничеству дилеров!</p>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8
+            <span class="contacts__span-block">Санкт-Петербург</span>
+          </address>
+        </div>
       </div>
       <div class="contacts__map">
-        <!-- здесь будет iframe -->
+        <h3 class="visually-hidden">Найти на карте нас очень легко:</h3>
+        <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.531898444459!2d30.32131895840098!3d59.93855939555751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575105566771!5m2!1sru!2sru" width="320" height="400" style="border:0;" allowfullscreen=""></iframe>
       </div>
     </section>
-    <section class="socials">
+    <section class="socials container">
       <h2 class="visually-hidden">Социальные сети</h2>
-      <div class="container container__flex">
         <div class="socials__logo-wrapper">
           <a href="#" class="socials__logo-link">
             <img class="socials__logo-img" src="./img/logo-footer.svg" width="128" height="25"
@@ -278,7 +293,6 @@
             </svg>
           </a>
         </div>
-      </div>
     </section>
   </footer>
   <script src="./js/exetrnal.js"></script>

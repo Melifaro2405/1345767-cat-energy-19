@@ -18,9 +18,27 @@
   }
 }
 
-.container__flex {
-  padding: 0;
+.container--form {
+  display: block;
+  width: 100%;
+  max-width: 768px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
 
+  @media (min-width: @tablet-width) {
+    padding-left: 71px;
+    padding-right: 67px;
+    max-width: 1300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.container__flex {
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;

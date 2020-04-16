@@ -1,36 +1,44 @@
-.program__text-preview {
+.program {
+  padding-top: 10px;
+  border-top: 1px solid #e6e6e6;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
+.program__title {
+  margin-top: 4.5px;
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 38.5px;
+    margin-bottom: 53px;
+  }
+}
+
+.program__text {
   color: #111111;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-}
 
-.program__fieldset {
-  border: none;
-  color: #222222;
-}
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 41px;
+    padding-right: 290px;
+    margin-bottom: 40px;
+  }
 
-.program__fieldset-title {
-  color: #111111;
-  font-size: 24px;
-  line-height: 24px;
-}
-
-.program__fieldset-input {
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 18px;
-}
-
-.program__fieldset-label {
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 18px;
-}
-
-.program__note {
-  text-align: center;
-  color: #444444;
-  font-size: 14px;
-  line-height: 16px;
+  @media (min-width: @desktop-width) {
+    padding-right: 65%;
+    padding-left: 0;
+    margin-bottom: 39px;
+  }
 }
