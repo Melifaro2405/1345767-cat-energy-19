@@ -1,0 +1,129 @@
+.supple {
+  padding-top: 19px;
+  padding-bottom: 20px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 19px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 26px;
+    padding-bottom: 20px;
+  }
+}
+
+.supple__title {
+  width: 184px;
+}
+
+.supple__list {
+  .list-reset();
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 71px;
+    padding-right: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.supple__item {
+  position: relative;
+  padding-left: 45px;
+  width: 100%;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 58px;
+    width: 50%;
+    min-height: 72px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 25%;
+  }
+}
+
+.supple__label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  width: 100%;
+  vertical-align: middle;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.supple__label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: white;
+  border: 1px solid #cfcfcf;
+
+  @media (min-width: @tablet-width) {
+    top: -5px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.supple__input:checked + .supple__label::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 9px;
+  display: block;
+  border-bottom: 1.5px solid #68b738;
+  border-left: 1.5px solid #68b738;
+  transform: rotate(-45deg);
+  left: 6px;
+  top: 7px;
+
+  @media (min-width: @tablet-width) {
+    left: 12px;
+    top: 9px;
+  }
+}
+
+.supple__label:focus,
+.supple__label:hover {
+  opacity: 0.8;
+}
+
+.supple__label:active {
+  opacity: 0.4;
+}
+
+.supple__input:disabled + .supple__label {
+  opacity: 0.4;
+}
+
+.supple__input:focus + .supple__label {
+  outline: 1px solid #cdcdcd;
+}

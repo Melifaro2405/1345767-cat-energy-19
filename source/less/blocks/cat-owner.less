@@ -9,40 +9,111 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 0;
-  }
-}
-
-.cat-owner__fieldset {
-  .fieldset-reset ();
-}
-
-.cat-owner__span-break {
-  display: block;
-
-  @media (min-width: @tablet-width) {
-    display: inline;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
 .cat-owner__title {
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
-  margin-bottom: 28px;
-  padding-bottom: 5px;
-  overflow: hidden;
+  width: 220px;
+}
+
+.cat-owner__fieldset {
+  border: none;
+}
+
+.cat-owner__label {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  align-items: center;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    font-size: 36px;
-    line-height: 36px;
-    margin-bottom: 70px;
+    margin-bottom: 19px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
-    margin-bottom: 71px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 19px;
+    width: 47%;
+    margin-right: 38px;
+  }
+}
+
+.cat-owner__input {
+  flex-grow: 1;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 12px 40px 13px 15px;
+  border: 1px solid #e6e6e6;
+  outline: none;
+
+  &::placeholder {
+    opacity: 1;
+  }
+
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
+
+  &:focus,
+  &:active {
+    outline: 2px solid #444444;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    outline: 2px solid #ff8282;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 8px 50px 12px 19px;
+  }
+}
+
+.cat-owner__input:focus ~ .cat-owner__icon-wrapper .cat-owner-icon,
+.cat-owner__input:active ~ .cat-owner__icon-wrapper .cat-owner-icon {
+  fill: #68b738;
+}
+
+.cat-owner__input:not(:placeholder-shown):invalid ~ .cat-owner__icon-wrapper .cat-owner-icon {
+  fill: #ff8282;
+}
+
+.cat-owner__icon-wrapper {
+  position: absolute;
+
+  &--email {
+    top: 13px;
+    right: 16px;
+
+    @media (min-width: @tablet-width) {
+      top: 14px;
+      right: 20px;
+    }
+  }
+
+  &--phone {
+    top: 13px;
+    right: 13px;
+
+    @media (min-width: @tablet-width) {
+      top: 17px;
+      right: 17px;
+    }
+  }
+}
+
+.cat-owner__text {
+  padding-right: 11px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 17px;
   }
 }
