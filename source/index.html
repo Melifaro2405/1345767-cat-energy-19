@@ -7,6 +7,10 @@
   <meta name="format-detection" content="telephone=no">
   <title>Cat Energy</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="./fonts/oswaldmedium.woff" as="font">
+  <link rel="preload" href="./fonts/oswaldregular.woff" as="font">
+  <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
+  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
 </head>
 
 <body>
@@ -16,7 +20,8 @@
   </div>
 
   <h1 class="visually-hidden">Cat Energy</h1>
-  <header class="page-header container">
+
+  <header class="page-header">
     <h2 class="visually-hidden">Навигация по страницам сайта</h2>
     <div class="page-header__logo-wrapper">
       <a class="page-header__logo" href="#">
@@ -29,11 +34,11 @@
       </a>
       <!-- main-nav__button--cross: меняет вид с бургера на крест -->
       <!-- main-nav__button--nojs: вид при выключенном JS -->
-      <button class="main-nav__button main-nav__button--cross main-nav__button--nojs" type="button">
+      <button class="page-header__button page-header__button--cross page-header__button--nojs" type="button">
         <span class="visually-hidden">Открыть меню</span>
-        <span class="main-nav__line main-nav__line-first"></span>
-        <span class="main-nav__line main-nav__line-second"></span>
-        <span class="main-nav__line main-nav__line-third"></span>
+        <span class="page-header__line page-header__line-first"></span>
+        <span class="page-header__line page-header__line-second"></span>
+        <span class="page-header__line page-header__line-third"></span>
       </button>
     </div>
     <!-- main-nav--visible: раскрытая навигация -->
@@ -135,7 +140,7 @@
             <img class="advantages__icon-img" src="./img/advantage-clock@1x.png"
               srcset="./img/advantage-clock@2x.png 2x" width="50" height="50" alt="Изображение порошка">
           </div>
-          <p class="advantages__item-text">Уже через месяц наслаждайтесь изменениями к лучшему <br> вашего питомца!</p>
+          <p class="advantages__item-text">Уже через месяц наслаждайтесь изменениями к лучшему <span class="advantages__span-wrap">вашего питомца!</span></p>
         </li>
       </ul>
     </section>
@@ -159,7 +164,7 @@
             </li>
           </ul>
           <p class="live-example__cost">
-            Затраты на питание: 15 000 руб.
+            Затраты на питание: <span class="live-example__span-expenses">15 000 руб</span>
           </p>
         </div>
         <div class="slider">
@@ -177,7 +182,6 @@
                 <img class="slider__img slider__img--fat-cat" src="img/before-mobile@1x.png"
                   srcset="img/before-mobile@2x.png 2x" alt="Изображение толстого кота" width="311" height="232">
               </picture>
-
             </div>
             <div class="slider__picture slider__picture--slim-cat">
               <picture>
@@ -195,7 +199,9 @@
           </div>
           <div class="slider__toggle">
             <button class="slider__button slider__button--fat-cat">Было</button>
-            <input class="slider__range" type="range" id="slider" min="0" max="100" value="50">
+            <div class="slider__range-scale">
+              <span class="slider__range-toggle"></span>
+            </div>
             <button class="slider__button slider__button--slim-cat">Стало</button>
           </div>
         </div>
@@ -204,6 +210,7 @@
   </main>
 
   <footer class="page-footer">
+
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
       <div class="contacts__container">
@@ -221,6 +228,7 @@
           width="320" height="400" style="border:0;" allowfullscreen=""></iframe>
       </div>
     </section>
+
     <section class="socials container">
       <h2 class="visually-hidden">Социальные сети</h2>
       <div class="socials__logo-wrapper">
@@ -265,7 +273,9 @@
       </div>
     </section>
   </footer>
-  <script src="./js/exetrnal.js"></script>
+
+  <script src="js/exetrnal.min.js"></script>
+
 </body>
 
 </html>

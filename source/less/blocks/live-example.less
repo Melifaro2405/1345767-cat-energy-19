@@ -1,7 +1,7 @@
 .live-example {
   background: #f2f2f2;
   padding-top: 9px;
-  padding-bottom: 33px;
+  padding-bottom: 36px;
 
   @media (min-width: @tablet-width) {
     background: transparent;
@@ -11,7 +11,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    background: linear-gradient(#ffffff 30%, #f2f2f2 30%);
+    background: linear-gradient(#ffffff 29%, #f2f2f2 29%);
   }
 }
 
@@ -27,16 +27,18 @@
 
 .live-example__title {
   margin-top: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 51px;
+    margin-top: 7px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: @desktop-width) {
     display: block;
-    padding-top: 55px;
-    padding-bottom: 20px;
+    padding-top: 45px;
+    padding-bottom: 80px;
+    margin-bottom: 0;
   }
 }
 
@@ -46,11 +48,12 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
   }
 
   @media (min-width: @desktop-width) {
+    flex-direction: column;
     width: 50%;
-    min-height: 500px;
   }
 }
 
@@ -59,28 +62,37 @@
   font-size: 14px;
   line-height: 18px;
   padding-right: 5px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
     font-size: 16px;
     line-height: 24px;
     padding-right: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 53px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 180px;
+    padding-right: 135px;
+    margin-top: 67px;
+    margin-bottom: 67px;
   }
 }
 
 .live-example__list {
+  .list-reset();
   display: flex;
   justify-content: space-between;
-  .list-reset();
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
+    width: 60%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin-bottom: 52px;
   }
 }
 
@@ -95,11 +107,13 @@
   @media (min-width: @tablet-width) {
     min-width: 162px;
     height: 72px;
+    margin-right: 42px;
   }
 }
 
 .live-example__field {
   margin-top: 15px;
+  margin-bottom: 15px;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -119,7 +133,7 @@
   font-size: 12px;
   line-height: 12px;
   width: 77px;
-  top: 50px;
+  top: 48px;
   left: 22px;
   background: #f2f2f2;
   padding: 0 5px;
@@ -156,9 +170,11 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     width: 180px;
+    margin-top: 12px;
     margin-left: auto;
     font-size: 20px;
     text-align: right;
@@ -168,6 +184,21 @@
     width: 100%;
     text-align: left;
     align-self: center;
+    margin-top: 0;
     margin-bottom: 40px;
+  }
+}
+
+.live-example__span-expenses {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 9px;
+    margin-right: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    margin-right: 0;
+    margin-left: 59px;
   }
 }

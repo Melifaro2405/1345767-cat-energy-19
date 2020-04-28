@@ -21,20 +21,26 @@
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: #f2f2f2;
-  padding: 30px 20px;
+  padding-top: 27px;
+  padding-bottom: 26px;
+  padding-left: 19px;
+  padding-right: 20px;
 
   &--bg-wt {
     background-color: #ffffff;
   }
 
   @media (min-width: @tablet-width) {
-    padding: 44px 72px;
+    padding-top: 63px;
+    padding-right: 30px;
+    padding-bottom: 56px;
+    padding-left: 71px;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
     width: 570px;
-    padding-left: 35px;
+    padding-left: 76px;
     padding-right: 24px;
     background-color: #ffffff;
     max-width: 1300px;
@@ -54,6 +60,7 @@
     font-size: 20px;
     line-height: 25px;
     width: 200px;
+    padding-top: 2px;
   }
 }
 
@@ -68,9 +75,11 @@
     font-size: 16px;
     width: 220px;
     text-align: right;
-    margin-top: 18px;
     padding-right: 42px;
-    padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
   }
 }
 

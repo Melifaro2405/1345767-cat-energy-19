@@ -14,6 +14,20 @@
   }
 }
 
+.cat-owner__title-wrapper {
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 23px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 21px;
+    margin-bottom: 70px;
+  }
+}
+
 .cat-owner__title {
   width: 220px;
 }
@@ -33,14 +47,16 @@
   margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 19px;
+    margin-bottom: 20px;
     font-size: 20px;
     line-height: 20px;
+    width: 100%;
   }
 
   @media (min-width: @desktop-width) {
     width: 47%;
-    margin-right: 38px;
+    margin-right: 39px;
+    padding-left: 41px;
   }
 }
 
@@ -77,12 +93,12 @@
   }
 }
 
-.cat-owner__input:focus ~ .cat-owner__icon-wrapper .cat-owner__icon,
-.cat-owner__input:active ~ .cat-owner__icon-wrapper .cat-owner__icon {
+.cat-owner__input:focus~.cat-owner__icon-wrapper .cat-owner__icon,
+.cat-owner__input:active~.cat-owner__icon-wrapper .cat-owner__icon {
   fill: #68b738;
 }
 
-.cat-owner__input:not(:placeholder-shown):invalid ~ .cat-owner__icon-wrapper .cat-owner__icon {
+.cat-owner__input:not(:placeholder-shown):invalid~.cat-owner__icon-wrapper .cat-owner__icon {
   fill: #ff8282;
 }
 
@@ -114,6 +130,10 @@
   padding-right: 11px;
 
   @media (min-width: @tablet-width) {
-    padding-right: 17px;
+    padding-right: 19px;
+
+    &--phone {
+      padding-right: 13px;
+    }
   }
 }

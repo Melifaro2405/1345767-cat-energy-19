@@ -1,6 +1,8 @@
 .socials {
-  padding: 20px;
-  padding-top: 38px;
+  padding-top: 39.5px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -25,8 +27,14 @@
 
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
-    padding-top: 20px;
+    padding-top: 13px;
+    padding-left: 1px;
     border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-top: 20px;
   }
 }
 
@@ -51,6 +59,8 @@
 
   @media (min-width: @desktop-width) {
     width: 22%;
+    padding-right: 62px;
+    padding-top: 18px;
   }
 }
 
@@ -67,39 +77,54 @@
 .socials__icon-vk {
   width: 22px;
   height: 12px;
-  margin-top: 5px;
+  margin-top: 8px;
+  margin-left: -8px;
 
   @media (min-width: @tablet-width) {
     width: 30px;
     height: 16px;
+    margin-top: 7px;
+    margin-left: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 }
 
 .socials__icon-insta {
   width: 16px;
   height: 16px;
-  margin-top: 3px;
+  margin-top: 6px;
   margin-left: 4px;
 
   @media (min-width: @tablet-width) {
     width: 23px;
     height: 23px;
-    margin-top: 1px;
-    margin-left: 4px;
+    margin-top: 4px;
+    margin-left: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 13px;
   }
 }
 
 .socials__icon-fb {
   width: 10px;
   height: 19px;
-  margin-top: 1px;
-  margin-left: 5px;
+  margin-top: 4px;
+  margin-left: 13px;
 
   @media (min-width: @tablet-width) {
     width: 14px;
     height: 28px;
-    margin-top: -2px;
-    margin-left: 2px;
+    margin-top: 1px;
+    margin-left: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 20px;
   }
 }
 
@@ -118,7 +143,7 @@
   padding-top: 20px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 15px;
+    padding-top: 14px;
   }
 }
 
@@ -137,15 +162,15 @@
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 16px;
-  margin-top: 10px;
+  margin-top: 11px;
   margin-bottom: 10px;
   color: #444444;
 }
 
 .socials__academy-logo {
-  text-align: left;
   width: 39px;
   height: 39px;
+  margin-right: -6px;
 }
 
 .socials__academy-link:focus .socials__academy-logo,

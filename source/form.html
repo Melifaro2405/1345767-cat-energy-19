@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <title>Cat Energy - Программа для подбора корма!</title>
-  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/oswaldmedium.woff" as="font">
+  <link rel="preload" href="./fonts/oswaldregular.woff" as="font">
+  <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
+  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
 </head>
 
 <body>
@@ -16,21 +20,24 @@
   </div>
 
   <h1 class="visually-hidden">Cat Energy - Программа для подбора корма!</h1>
-  <header class="page-header container">
+  <header class="page-header page-header--catalog-form">
     <h2 class="visually-hidden">Навигация по страницам сайта</h2>
     <div class="page-header__logo-wrapper">
-      <picture>
-        <source media="(min-width: 1300px)" srcset="./img/logo-desktop.svg">
-        <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
-      </picture>
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="./img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39"
+            alt="Логотип Cat Energy">
+        </picture>
+      </a>
       <!-- main-nav__button--cross: меняет вид с бургера на крест -->
       <!-- main-nav__button--nojs: вид при выключенном JS -->
-      <button class="main-nav__button main-nav__button--cross main-nav__button--nojs" type="button">
+      <button class="page-header__button page-header__button--cross page-header__button--nojs" type="button">
         <span class="visually-hidden">Открыть меню</span>
-        <span class="main-nav__line main-nav__line-first"></span>
-        <span class="main-nav__line main-nav__line-second"></span>
-        <span class="main-nav__line main-nav__line-third"></span>
+        <span class="page-header__line page-header__line-first"></span>
+        <span class="page-header__line page-header__line-second"></span>
+        <span class="page-header__line page-header__line-third"></span>
       </button>
     </div>
     <!-- main-nav--visible: раскрытая навигация -->
@@ -59,21 +66,25 @@
         <fieldset class="cat-info" title="Введите данные питомца">
           <label class="cat-info__label">
             <span class="cat-info__text cat-info__text--name">Имя:*</span>
-            <input class="cat-info__input" type="text" name="cat-name" placeholder="Барсик" aria-label="Укажите имя домашнего питомца" autocomplete="off" required="">
+            <input class="cat-info__input" type="text" name="cat-name" placeholder="Барсик"
+              aria-label="Укажите имя домашнего питомца" autocomplete="off" required="">
           </label>
           <label class="cat-info__label">
             <span class="cat-info__text cat-info__text--weight">Вес (кг):*</span>
-            <input class="cat-info__input" type="text" name="cat-weight" placeholder="7" aria-label="Укажите вес домашнего питомца" autocomplete="off" pattern="[0-9]{1,2}" required="">
+            <input class="cat-info__input" type="text" name="cat-weight" placeholder="7"
+              aria-label="Укажите вес домашнего питомца" autocomplete="off" pattern="[0-9]{1,2}" required="">
           </label>
           <label class="cat-info__label">
             <span class="cat-info__text cat-info__text--age">Возраст (лет):</span>
-            <input class="cat-info__input" type="text" name="cat-age" placeholder="7" aria-label="Укажите возраст домашнего питомца" autocomplete="off">
+            <input class="cat-info__input" type="text" name="cat-age" placeholder="7"
+              aria-label="Укажите возраст домашнего питомца" autocomplete="off">
           </label>
         </fieldset>
         <fieldset class="cat-action" title="Выберите изменение веса питомца">
           <ul class="cat-action__list">
             <li class="cat-action__item">
-              <input class="cat-action__radio visually-hidden" type="radio" name="change-weight" id="min-weight" checked="">
+              <input class="cat-action__radio visually-hidden" type="radio" name="change-weight" id="min-weight"
+                checked="">
               <label class="cat-action__label" for="min-weight">Похудение</label>
             </li>
             <li class="cat-action__item">
@@ -87,15 +98,16 @@
           </ul>
         </fieldset>
       </div>
-      <h2 class="container__title-green-pas">
+      <h2 class="container__title-green-pas cat-owner__title-wrapper">
         <span class="container">
           <span class="container__title-green-pas--bg-white cat-owner__title">Контактные данные (владельца кота)</span>
         </span>
       </h2>
-      <fieldset class="cat-owner__fieldset form__wrapper" title="Введите данные владельца питомца">
+      <div class="cat-owner__fieldset form__wrapper" aria-label="Введите данные владельца питомца">
         <label class="cat-owner__label">
           <span class="cat-owner__text">E-mail:*</span>
-          <input class="cat-owner__input" type="email" name="email" placeholder="kuklachev@gmail.com" aria-label="Введите электронный адрес" autocomplete="off" required="">
+          <input class="cat-owner__input" type="email" name="email" placeholder="kuklachev@gmail.com"
+            aria-label="Введите электронный адрес" autocomplete="off" required="">
           <span class="cat-owner__icon-wrapper cat-owner__icon-wrapper--email">
             <svg class="cat-owner__icon" width="17" height="13" aria-label="Иконка почтового ящика">
               <use xlink:href="#icon-mail"></use>
@@ -103,24 +115,26 @@
           </span>
         </label>
         <label class="cat-owner__label">
-          <span class="cat-owner__text">Телефон:*</span>
-          <input class="cat-owner__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" aria-label="Введите номер телефона" autocomplete="off" required="">
+          <span class="cat-owner__text cat-owner__text--phone">Телефон:*</span>
+          <input class="cat-owner__input" type="tel" name="tel" placeholder="8 (960) 900-60-90"
+            aria-label="Введите номер телефона" autocomplete="off" required="">
           <span class="cat-owner__icon-wrapper cat-owner__icon-wrapper--phone">
             <svg class="cat-owner__icon" width="20" height="20" aria-label="Иконка с телефоном">
               <use xlink:href="#icon-phone"></use>
             </svg>
           </span>
         </label>
-      </fieldset>
-      <h2 class="container__title-green-pas">
+      </div>
+      <h2 class="container__title-green-pas cat-comment__title-wrapper">
         <span class="container">
           <span class="container__title-green-pas--bg-white cat-comment__title">Комментарий</span>
         </span>
       </h2>
       <div class="cat-comment form__wrapper">
-        <textarea class="cat-comment__textarea" name="comment" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <textarea class="cat-comment__textarea" name="comment"
+          placeholder="Расскажите обо всех повадках кота"></textarea>
       </div>
-      <h2 class="container__title-green-pas">
+      <h2 class="container__title-green-pas supple__title-wrapper">
         <span class="container">
           <span class="container__title-green-pas--bg-white supple__title">Дополнительно</span>
         </span>
@@ -151,7 +165,6 @@
         </div>
         <p class="form__hint">* — Обязательные поля</p>
       </div>
-
     </form>
   </main>
 
@@ -168,14 +181,17 @@
       </div>
       <div class="contacts__map">
         <h3 class="visually-hidden">Найти на карте нас очень легко:</h3>
-        <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.531898444459!2d30.32131895840098!3d59.93855939555751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575105566771!5m2!1sru!2sru" width="320" height="400" style="border:0;" allowfullscreen=""></iframe>
+        <iframe class="contacts__map-iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.531898444459!2d30.32131895840098!3d59.93855939555751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575105566771!5m2!1sru!2sru"
+          width="320" height="400" style="border:0;" allowfullscreen=""></iframe>
       </div>
     </section>
     <section class="socials container">
       <h2 class="visually-hidden">Социальные сети</h2>
       <div class="socials__logo-wrapper">
         <a href="#" class="socials__logo-link">
-          <img class="socials__logo-img" src="./img/logo-footer.svg" width="128" height="25" alt="Логотип компании Cat Energy">
+          <img class="socials__logo-img" src="./img/logo-footer.svg" width="128" height="25"
+            alt="Логотип компании Cat Energy">
         </a>
       </div>
       <ul class="socials__list">
@@ -214,7 +230,8 @@
       </div>
     </section>
   </footer>
-  <script src="./js/exetrnal.js"></script>
+
+  <script src="js/exetrnal.min.js"></script>
 
 </body>
 

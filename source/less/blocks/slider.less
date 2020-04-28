@@ -8,11 +8,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 219px;
     background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 188px;
+    padding-right: 54px;
     width: 50%;
   }
 }
@@ -26,9 +28,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: -170px;
+    margin-top: -188px;
     min-height: 512px;
     width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -209px;
   }
 }
 
@@ -44,17 +50,27 @@
 
     &--fat-cat {
       display: block;
-      clip: rect(0, 384px, 541px, 0);
+      clip: rect(0, 377px, 541px, 0);
+      margin-left: 7px;
     }
 
     &--slim-cat {
       display: block;
-      clip: rect(0, 768px, 541px, 384px);
+      clip: rect(0, 768px, 541px, 377px);
+      margin-left: 7px;
     }
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
+
+    &--fat-cat {
+      clip: rect(0, 404px, 541px, 0);
+    }
+
+    &--slim-cat {
+      clip: rect(0, 768px, 541px, 404px);
+    }
   }
 }
 
@@ -64,6 +80,10 @@
   width: auto;
   height: auto;
   max-width: none;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 19px;
+  }
 }
 
 .slider__toggle {
@@ -82,12 +102,12 @@
     width: auto;
     padding-left: 1px;
     margin-top: auto;
-    margin-bottom: 30px;
+    margin-bottom: 68px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 24px;
-    margin-top: 21px;
+    margin-left: 51px;
+    margin-top: -23px;
     margin-bottom: 40px;
   }
 }
@@ -108,45 +128,99 @@
     font-size: 20px;
     padding-bottom: 5px;
     padding-top: 6px;
-    padding-left: 3px;
-    padding-right: 3px;
-    border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 1px dotted #bebebe;
+
+    &:hover {
+      border-bottom: 1px solid #989898;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 }
 
 .slider__button--fat-cat {
   margin-right: 12px;
-  text-align: right;
 
   @media (min-width: @tablet-width) {
-    width: 54px;
     margin-right: 0;
   }
 }
 
 .slider__button--slim-cat {
   margin-left: 12px;
-  text-align: left;
 
   @media (min-width: @tablet-width) {
-    width: 59px;
     margin-left: 0;
   }
 }
 
-.slider__range {
-  margin-left: 22px;
-  margin-right: 22px;
-  width: 40px;
+.slider__range-scale {
+  position: relative;
 
   @media (min-width: @tablet-width) {
+    height: 6px;
     width: 428px;
-    margin-left: 21px;
-    margin-right: 19px;
+    background-color: #dcdcdc;
+    border-radius: 6px;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+}
+
+.slider__range-toggle {
+  position: absolute;
+  width: 84px;
+  height: 14px;
+  border-radius: 6px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+  left: -40px;
+  top: -7px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #68b738;
+    top: 3px;
+    left: 3px;
   }
 
-  @media (min-width: @desktop-width) {
-    margin-left: 23px;
-    margin-right: 16px;
+  @media (min-width: @tablet-width) {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    margin-left: 50%;
+    transform: translateX(-50%);
+    top: -14px;
+    left: auto;
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      scale: 1.2;
+    }
+
+    &:active {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      border: solid 2px #68b738;
+    }
+
+    &::after {
+      width: 8px;
+      height: 8px;
+      top: auto;
+      left: auto;
+      border-radius: 50%;
+      margin-left: 50%;
+      margin-top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
