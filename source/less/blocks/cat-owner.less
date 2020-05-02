@@ -1,39 +1,11 @@
 .cat-owner {
-  padding-top: 8px;
-  padding-bottom: 7px;
-
   @media (min-width: @tablet-width) {
-    padding-top: 46px;
-    padding-bottom: 37.5px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 0;
-    max-width: 1440px;
-    margin: 0 auto;
+    margin-bottom: 56px;
   }
-}
-
-.cat-owner__title-wrapper {
-  margin-bottom: 28px;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 23px;
-    margin-bottom: 72px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 21px;
-    margin-bottom: 70px;
-  }
-}
-
-.cat-owner__title {
-  width: 220px;
-}
-
-.cat-owner__fieldset {
-  border: none;
 }
 
 .cat-owner__label {
@@ -93,12 +65,12 @@
   }
 }
 
-.cat-owner__input:focus~.cat-owner__icon-wrapper .cat-owner__icon,
-.cat-owner__input:active~.cat-owner__icon-wrapper .cat-owner__icon {
+.cat-owner__input:focus ~ .cat-owner__icon-wrapper .cat-owner__icon,
+.cat-owner__input:active ~ .cat-owner__icon-wrapper .cat-owner__icon {
   fill: #68b738;
 }
 
-.cat-owner__input:not(:placeholder-shown):invalid~.cat-owner__icon-wrapper .cat-owner__icon {
+.cat-owner__input:not(:placeholder-shown):invalid ~ .cat-owner__icon-wrapper .cat-owner__icon {
   fill: #ff8282;
 }
 

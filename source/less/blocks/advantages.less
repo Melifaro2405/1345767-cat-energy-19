@@ -8,7 +8,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 40px;
+    padding-top: 38px;
     padding-bottom: 0;
     border-bottom: none;
     padding-left: 0;
@@ -21,8 +21,8 @@
   margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 34px;
-    margin-bottom: 12px;
+    margin-top: 36px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -37,29 +37,98 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 13px;
     counter-reset: list; // создаем счётчик
   }
 }
 
 .advantages__item {
+  position: relative;
   display: flex;
   min-height: 60px;
   margin-bottom: 20px;
+  padding-left: 60px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #68b738;
+    width: 60px;
+    height: 60px;
+    left: 0;
+  }
+
+  &--leaf::after {
+    background-image: url("../img/advantage-leaf@1x.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
+  }
+
+  &--powder::after {
+    background-image: url("../img/advantage-powder@1x.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+  }
+
+  &--dining::after {
+    background-image: url("../img/advantage-dining@1x.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
+  }
+
+  &--clock::after {
+    background-image: url("../img/advantage-clock@1x.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 50%;
     min-height: 228px;
-    margin-top: 60px;
-    margin-bottom: 30px;
+    padding-left: 0;
+    padding-top: 125px;
+    margin-top: 49px;
+    margin-bottom: 40px;
     counter-increment: list; // увеличиваем значение счётчика
-    position: relative;
+
+    &::after {
+      width: 80px;
+      height: 80px;
+      top: 23px;
+    }
   }
 
   @media (min-width: @desktop-width) {
+    display: block;
     width: 25%;
     padding-left: 40px;
     padding-right: 40px;
+    padding-top: 103px;
+
+    &::after {
+      left: 40px;
+    }
   }
 }
 
@@ -72,8 +141,8 @@
       position: absolute;
       font-size: 281px;
       line-height: 281px;
-      left: 116px;
-      top: -40px;
+      left: 115px;
+      top: -16px;
       z-index: -1;
       color: #f2f2f2;
     }
@@ -98,10 +167,14 @@
       position: absolute;
       font-size: 281px;
       line-height: 281px;
-      left: 140px;
-      top: -40px;
+      left: 142px;
+      top: -16px;
       z-index: -1;
       color: #f2f2f2;
+    }
+
+    &::after {
+      left: 30px;
     }
   }
 
@@ -112,26 +185,12 @@
     &::before {
       left: 152px;
     }
+
+    &::after {
+      left: 40px;
+    }
   }
 }
-
-.advantages__icon-wrapper {
-  display: flex;
-  flex-shrink: 0;
-  background-color: #68b738;
-  width: 60px;
-  height: 60px;
-
-  @media (min-width: @tablet-width) {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.advantages__icon-img {
-  margin: auto;
-}
-
 
 .advantages__item-text {
   font-family: "Arial", "Helvetica", sans-serif;
@@ -140,21 +199,24 @@
   margin: 0;
   padding-left: 20px;
   padding-right: 5px;
-  align-self: center;
+  padding-top: 2px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     padding-left: 0;
-    padding-top: 33px;
+    padding-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 32px;
   }
 }
 
 .advantages__span-wrap {
 
   // Переносит часть текста на другую строку в соответствии с pperfect
-  @media (width: 768px),
-  (width: 1440px) {
+  @media (width: 768px), (width: 1440px) {
     &::before {
       content: "";
       display: block;

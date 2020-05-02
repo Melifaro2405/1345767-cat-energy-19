@@ -7,8 +7,6 @@
   <meta name="format-detection" content="telephone=no">
   <title>Cat Energy</title>
   <link href="css/style.min.css" rel="stylesheet">
-  <link rel="preload" href="./fonts/oswaldmedium.woff" as="font">
-  <link rel="preload" href="./fonts/oswaldregular.woff" as="font">
   <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
   <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
 </head>
@@ -61,6 +59,7 @@
     <h1 class="visually-hidden">Cat Energy</h1>
 
     <section class="select-program container">
+      <h2 class="visually-hidden">Мотивация смены питания кота</h2>
       <p class="select-program__title">Функциональное питание для котов</p>
       <p class="select-program__text">Занялся собой? Займись котом!</p>
       <picture>
@@ -78,9 +77,9 @@
       <a class="select-program__button button" href="form.html">Подобрать программу</a>
     </section>
 
-    <section class="select-program__type container">
-      <ul class="select-program__list">
-        <li class="select-program__list-item type-program">
+    <section class="type-program container">
+      <ul class="type-program__list">
+        <li class="type-program__item">
           <div class="type-program__icon-wrapper">
             <svg class="type-program__icon-cat-slim" width="35" height="49"
               aria-label="Иконка: перейдём к каталогу cat slim">
@@ -94,7 +93,7 @@
           </p>
           <a class="type-program__link type-program__link--arrow" href="#">Каталог Slim</a>
         </li>
-        <li class="select-program__list-item type-program type-program--next">
+        <li class="type-program__item type-program__item--next">
           <div class="type-program__icon-wrapper type-program__icon-wrapper-mod">
             <svg class="type-program__icon-cat-pro" width="67" height="28"
               aria-label="Иконка: перейдём к каталогу cat pro">
@@ -114,33 +113,19 @@
     <section class="advantages container">
       <h2 class="block-title advantages__title">Как это работает</h2>
       <ul class="advantages__list">
-        <li class="advantages__item">
-          <div class="advantages__icon-wrapper">
-            <img class="advantages__icon-img" src="./img/advantage-leaf@1x.png" srcset="./img/advantage-leaf@2x.png 2x"
-              width="50" height="50" alt="Изображение листа">
-          </div>
+        <li class="advantages__item advantages__item--leaf">
           <p class="advantages__item-text">Функциональное питание содержит только полезные питательные вещества.</p>
         </li>
-        <li class="advantages__item">
-          <div class="advantages__icon-wrapper">
-            <img class="advantages__icon-img" src="./img/advantage-powder@1x.png"
-              srcset="./img/advantage-powder@2x.png 2x" width="50" height="50" alt="Изображение порошка">
-          </div>
+        <li class="advantages__item advantages__item--powder">
           <p class="advantages__item-text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
         </li>
-        <li class="advantages__item">
-          <div class="advantages__icon-wrapper">
-            <img class="advantages__icon-img" src="./img/advantage-dining@1x.png"
-              srcset="./img/advantage-dining@2x.png 2x" width="50" height="50" alt="Изображение порошка">
-          </div>
+        <li class="advantages__item advantages__item--dining">
           <p class="advantages__item-text">Замените один-два приема обычной еды на наше функциональное питание.</p>
         </li>
-        <li class="advantages__item">
-          <div class="advantages__icon-wrapper">
-            <img class="advantages__icon-img" src="./img/advantage-clock@1x.png"
-              srcset="./img/advantage-clock@2x.png 2x" width="50" height="50" alt="Изображение порошка">
-          </div>
-          <p class="advantages__item-text">Уже через месяц наслаждайтесь изменениями к лучшему <span class="advantages__span-wrap">вашего питомца!</span></p>
+        <li class="advantages__item advantages__item--clock">
+          <p class="advantages__item-text">Уже через месяц наслаждайтесь изменениями к лучшему
+            <span class="advantages__span-wrap">вашего питомца!</span>
+          </p>
         </li>
       </ul>
     </section>
@@ -229,51 +214,55 @@
       </div>
     </section>
 
-    <section class="socials container">
+    <section>
       <h2 class="visually-hidden">Социальные сети</h2>
-      <div class="socials__logo-wrapper">
-        <a href="#" class="socials__logo-link">
-          <img class="socials__logo-img" src="./img/logo-footer.svg" width="128" height="25"
-            alt="Логотип компании Cat Energy">
-        </a>
-      </div>
-      <ul class="socials__list">
-        <li class="socials__item">
-          <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" target="blank">
-            <span class="visually-hidden">Мы в Контакте</span>
-            <svg class="socials__icon-vk" width="22" height="12" aria-label="Перейти на страницу Вконтакте">
-              <use xlink:href="#icon-vk"></use>
+      <div class="socials container">
+        <div class="socials__logo-wrapper">
+          <a href="#" class="socials__logo-link">
+            <img class="socials__logo-img" src="./img/logo-footer.svg" width="128" height="25"
+              alt="Логотип компании Cat Energy">
+          </a>
+        </div>
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" target="blank">
+              <span class="visually-hidden">Мы в Контакте</span>
+              <svg class="socials__icon-vk" width="22" height="12" aria-label="Перейти на страницу Вконтакте">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy"
+              target="blank">
+              <span class="visually-hidden">Мы в Инстаграме</span>
+              <svg class="socials__icon-insta" width="16" height="16" aria-label="Перейти на страницу Instagram">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" target="blank">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg class="socials__icon-fb" width="10" height="19" aria-label="Перейти на страницу Facebook">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="socials__academy-wrapper">
+          <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" target="blank">
+            <span class="socials__academy-text">HTML Academy</span>
+            <svg class="socials__academy-logo" width="10" height="19" aria-label="Перейти на страницу Facebook">
+              <use xlink:href="#icon-htmlacademy"></use>
             </svg>
           </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy" target="blank">
-            <span class="visually-hidden">Мы в Инстаграме</span>
-            <svg class="socials__icon-insta" width="16" height="16" aria-label="Перейти на страницу Instagram">
-              <use xlink:href="#icon-insta"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" target="blank">
-            <span class="visually-hidden">Мы в Фейсбуке</span>
-            <svg class="socials__icon-fb" width="10" height="19" aria-label="Перейти на страницу Facebook">
-              <use xlink:href="#icon-fb"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <div class="socials__academy-wrapper">
-        <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" target="blank">
-          <span class="socials__academy-text">HTML Academy</span>
-          <svg class="socials__academy-logo" width="10" height="19" aria-label="Перейти на страницу Facebook">
-            <use xlink:href="#icon-htmlacademy"></use>
-          </svg>
-        </a>
+        </div>
       </div>
     </section>
   </footer>
 
+  <script src="js/picturefill.min.js"></script>
   <script src="js/exetrnal.min.js"></script>
 
 </body>

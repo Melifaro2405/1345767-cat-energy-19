@@ -7,8 +7,6 @@
   <meta name="format-detection" content="telephone=no">
   <title>Каталог продукции Cat Energy</title>
   <link href="css/style.min.css" rel="stylesheet">
-  <link rel="preload" href="./fonts/oswaldmedium.woff" as="font">
-  <link rel="preload" href="./fonts/oswaldregular.woff" as="font">
   <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
   <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
 </head>
@@ -24,7 +22,7 @@
   <header class="page-header page-header--catalog-desktop">
     <h2 class="visually-hidden">Навигация по страницам сайта</h2>
     <div class="page-header__logo-wrapper">
-      <a class="page-header__logo" href="#">
+      <a class="page-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1300px)" srcset="./img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
@@ -319,9 +317,9 @@
     </section>
 
     <section class="additionaly">
-      <h2 class="container__title-green-pas additionaly__title-wrapper">
+      <h2 class="title-green-pas additionaly__title-wrapper">
         <span class="container">
-          <span class="container__title-green-pas--bg-white additionaly__title">Дополнительные товары</span>
+          <span class="title-green-pas__bg-white additionaly__title">Дополнительные товары</span>
         </span>
       </h2>
       <div class="additionaly__wrapper container">
@@ -333,7 +331,8 @@
           </li>
           <li class="additionaly__item">
             <h3 class="additionaly__item-title">Питьевая вода</h3>
-            <p class="additionaly__text">5 литров <span class="additionaly__span additionaly__span--water">50 Р.</span></p>
+            <p class="additionaly__text">5 литров <span class="additionaly__span additionaly__span--water">50 Р.</span>
+            </p>
             <a class="additionaly__button button" href="#" title="Оформить заказ">Заказать</a>
           </li>
           <li class="additionaly__item">
@@ -377,51 +376,55 @@
       </div>
     </section>
 
-    <section class="socials container">
+    <section>
       <h2 class="visually-hidden">Социальные сети</h2>
-      <div class="socials__logo-wrapper">
-        <a href="#" class="socials__logo-link">
-          <img class="socials__logo-img" src="./img/logo-footer.svg" width="128" height="25"
-            alt="Логотип компании Cat Energy">
-        </a>
-      </div>
-      <ul class="socials__list">
-        <li class="socials__item">
-          <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" target="blank">
-            <span class="visually-hidden">Мы в Контакте</span>
-            <svg class="socials__icon-vk" width="22" height="12" aria-label="Перейти на страницу Вконтакте">
-              <use xlink:href="#icon-vk"></use>
+      <div class="socials container">
+        <div class="socials__logo-wrapper">
+          <a href="#" class="socials__logo-link">
+            <img class="socials__logo-img" src="./img/logo-footer.svg" width="128" height="25"
+              alt="Логотип компании Cat Energy">
+          </a>
+        </div>
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" target="blank">
+              <span class="visually-hidden">Мы в Контакте</span>
+              <svg class="socials__icon-vk" width="22" height="12" aria-label="Перейти на страницу Вконтакте">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy"
+              target="blank">
+              <span class="visually-hidden">Мы в Инстаграме</span>
+              <svg class="socials__icon-insta" width="16" height="16" aria-label="Перейти на страницу Instagram">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" target="blank">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg class="socials__icon-fb" width="10" height="19" aria-label="Перейти на страницу Facebook">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="socials__academy-wrapper">
+          <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" target="blank">
+            <span class="socials__academy-text">HTML Academy</span>
+            <svg class="socials__academy-logo" width="10" height="19" aria-label="Перейти на страницу Facebook">
+              <use xlink:href="#icon-htmlacademy"></use>
             </svg>
           </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy" target="blank">
-            <span class="visually-hidden">Мы в Инстаграме</span>
-            <svg class="socials__icon-insta" width="16" height="16" aria-label="Перейти на страницу Instagram">
-              <use xlink:href="#icon-insta"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" target="blank">
-            <span class="visually-hidden">Мы в Фейсбуке</span>
-            <svg class="socials__icon-fb" width="10" height="19" aria-label="Перейти на страницу Facebook">
-              <use xlink:href="#icon-fb"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <div class="socials__academy-wrapper">
-        <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" target="blank">
-          <span class="socials__academy-text">HTML Academy</span>
-          <svg class="socials__academy-logo" width="10" height="19" aria-label="Перейти на страницу Facebook">
-            <use xlink:href="#icon-htmlacademy"></use>
-          </svg>
-        </a>
+        </div>
       </div>
     </section>
   </footer>
 
+  <script src="js/picturefill.min.js"></script>
   <script src="js/exetrnal.min.js"></script>
 
 </body>
