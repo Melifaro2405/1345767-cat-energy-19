@@ -68,6 +68,7 @@
   line-height: 18px;
   text-transform: uppercase;
   font-weight: 400;
+  color: #222222;
   width: 100%;
   vertical-align: middle;
   cursor: pointer;
@@ -124,17 +125,16 @@
   }
 }
 
-.supple__label:focus,
-.supple__label:hover {
-  opacity: 0.8;
+.supple__input:hover + .supple__label::before {
+  border-color: #bababa;
 }
 
 .supple__label:active {
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .supple__input:disabled + .supple__label {
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .supple__input:focus + .supple__label {

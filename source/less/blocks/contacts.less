@@ -98,7 +98,7 @@
 .contacts__map {
   height: 362px;
   margin: 0 auto;
-  background-image: url("../img/map.jpg");
+  background-image: url("../img/map-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -106,10 +106,12 @@
 
   @media (min-width: @tablet-width) {
     height: 400px;
-    background-position: center;
+    background-image: url("../img/map-tablet.jpg");
+    background-size: cover;
   }
 
   @media (min-width: @desktop-width) {
+    background-image: url("../img/map.jpg");
     width: 100%;
     margin: 0 auto;
     position: absolute;

@@ -38,9 +38,14 @@
   }
 }
 
-.socials__logo-link:active {
-  opacity: 0.4;
+.socials__logo-link:hover,
+.socials__logo-link:focus {
+  opacity: 0.8;
   transition-duration: 0.2s;
+}
+
+.socials__logo-link:active {
+  opacity: 0.6;
 }
 
 .socials__list {
@@ -128,14 +133,18 @@
   }
 }
 
-.socials__icon-vk:hover,
-.socials__icon-vk:focus,
-.socials__icon-insta:hover,
-.socials__icon-insta:focus,
-.socials__icon-fb:hover,
-.socials__icon-fb:focus {
+.socials__link svg {
+  fill: #666666;
+  transition: fill 200ms;
+}
+
+.socials__link:hover svg,
+.socials__link:focus svg {
   fill: #68b738;
-  transition-duration: 0.2s;
+}
+
+.socials__link:active svg {
+  opacity: 0.3;
 }
 
 .socials__academy-wrapper {
@@ -175,6 +184,8 @@
   width: 39px;
   height: 39px;
   margin-right: -6px;
+  fill: #444444;
+  transition: all 200ms;
 
   @media (min-width: @desktop-width) {
     margin-top: 8px;
@@ -184,7 +195,6 @@
 .socials__academy-link:focus .socials__academy-logo,
 .socials__academy-link:hover .socials__academy-logo {
   fill: #68b738;
-  transition-duration: 0.2s;
 }
 
 .socials__academy-link:active {

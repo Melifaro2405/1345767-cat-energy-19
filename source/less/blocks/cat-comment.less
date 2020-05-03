@@ -18,6 +18,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  color: #444444;
   width: 100%;
   min-height: 151px;
   margin-top: 14px;
@@ -29,6 +30,10 @@
   border: 1px solid #e6e6e6;
   resize: none;
   outline: none;
+
+  &::placeholder {
+    color: #444444;
+  }
 
   @media (min-width: @tablet-width) {
     min-height: 174px;

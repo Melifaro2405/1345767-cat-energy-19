@@ -59,19 +59,19 @@
 }
 
 .additionaly__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-bottom: 17px;
   text-align: left;
   border-top: 1px solid #cdcdcd;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: flex-end;
     padding-top: 26px;
     padding-left: 36.5px;
     padding-right: 36px;
-    padding-bottom: 27px;
+    padding-bottom: 26px;
     border: 1px solid #d9d9d9;
     border-top: none;
   }
@@ -94,7 +94,8 @@
   font-size: 16px;
   line-height: 16px;
   margin-top: 13px;
-  margin-bottom: 10.5px;
+  margin-bottom: 13px;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     max-width: 50%;
@@ -103,13 +104,14 @@
     font-size: 20px;
     line-height: 20px;
     margin-left: 2px;
+    margin-right: auto;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 29%;
     margin-top: 11px;
     margin-bottom: 11px;
-    margin-left: 0;
+    margin-left: 1px;
   }
 }
 
@@ -117,6 +119,7 @@
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 14px;
+  margin-top: 0;
 
   @media (min-width: @tablet-width) {
     max-width: 48%;
@@ -130,39 +133,50 @@
     width: 36.2%;
     margin-top: 15px;
     margin-bottom: 12px;
-    margin-right: 37px;
+    margin-right: 0;
     margin-left: auto;
-    padding-left: 37px;
+    padding-left: 64px;
     text-align: left;
   }
 }
 
-.additionaly__span {
-  float: right;
+.additionaly__cost {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 0;
+  margin-left: auto;
 
   @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
     text-align: right;
     width: 95px;
+    margin-left: 0;
+    margin-top: 3px;
   }
-}
 
-.additionaly__span--water {
   @media (min-width: @desktop-width) {
-    margin-right: 9px;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 15px;
+    margin-left: 23px;
   }
 }
 
 .additionaly__button {
   font-size: 16px;
+  width: 100%;
+  margin-top: 1px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
   }
 
   @media (min-width: @desktop-width) {
-    width: 27.5%;
-    margin-top: 1px;
-    margin-right: -1px;
+    align-self: center;
+    width: 31.7%;
+    margin-top: -4px;
   }
 }
 

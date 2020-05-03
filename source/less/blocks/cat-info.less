@@ -26,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
@@ -80,12 +80,16 @@
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
+  color: #444444;
   flex-grow: 1;
-  padding-top: 11px;
-  padding-bottom: 13px;
+  height: 45px;
   padding-left: 15px;
   outline: none;
   border: 1px solid #e6e6e6;
+
+  &::placeholder {
+    color: #444444;
+  }
 
   &:hover {
     outline: 1px solid #cdcdcd;
@@ -106,5 +110,6 @@
     padding-left: 18px;
     font-size: 20px;
     line-height: 20px;
+    height: 52px;
   }
 }
